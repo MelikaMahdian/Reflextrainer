@@ -1,18 +1,61 @@
+/* =========================
+   LAYOUT.CSS (global styles)
+   - Menu layout
+   - Shared level look (wie Colors)
+   - Back button
+   ========================= */
+
+/* ---------- Shared Background (Dark Navy) ---------- */
+:root {
+  --bg-top: #0b1220;
+  --bg-bottom: #0a0f1a;
+  --bg-glow-strong: rgba(255,255,255,.10);
+  --bg-glow-soft: rgba(255,255,255,.06);
+}
+
 /* MENU Background */
 body.menu {
   background:
-    radial-gradient(900px 420px at 50% -120px, rgba(255,255,255,.10), transparent 60%),
-    radial-gradient(900px 420px at 50% 120%, rgba(255,255,255,.06), transparent 65%),
-    linear-gradient(180deg, #0b1220, #0a0f1a);
+    radial-gradient(900px 420px at 50% -120px, var(--bg-glow-strong), transparent 60%),
+    radial-gradient(900px 420px at 50% 120%, var(--bg-glow-soft), transparent 65%),
+    linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
   color: #fff;
   min-height: 100svh;
 }
 
+/* LEVEL Background (wie Colors) */
+body.level {
+  background:
+    radial-gradient(900px 420px at 50% -120px, var(--bg-glow-strong), transparent 60%),
+    radial-gradient(900px 420px at 50% 120%, var(--bg-glow-soft), transparent 65%),
+    linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+  color: #fff;
+  min-height: 100svh;
+}
+
+/* ---------- Shared Back Button ---------- */
+.back-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 50;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,.95);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+
+/* =========================
+   MENU PAGE
+   ========================= */
 .menu-page {
-  min-height: 100vh;
+  min-height: 100svh;
   display: grid;
   place-items: center;
   padding: 48px 18px 36px;
+  box-sizing: border-box;
 }
 
 .menu-title {
@@ -90,33 +133,59 @@ body.menu {
   text-align: center;
 }
 
-/* shared back button */
-.back-btn {
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  z-index: 50;
-  background: transparent;
-  border: none;
-  color: rgba(255,255,255,.95);
-  font-size: 18px;
-  cursor: pointer;
-  padding: 8px 10px;
+/* =========================
+   LEVEL PAGE (wie Colors)
+   ========================= */
+.level-page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 72px 18px 36px; /* Platz für Back-Button */
+  box-sizing: border-box;
 }
 
-/* ---------- Responsive Layout (Menu & global) ---------- */
+.level-card {
+  width: min(980px, 94vw);
+  background: #fff;
+  color: #111;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 22px 60px rgba(0,0,0,.35);
+}
+
+.level-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.level-title {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #111;
+}
+
+.level-subtitle {
+  margin: 0;
+  color: rgba(0,0,0,.60);
+}
+
+/* =========================
+   MOBILE
+   ========================= */
 @media (max-width: 768px) {
+  /* Menu */
   .menu-page {
-    display: block;       /* statt grid */
-    min-height: 100svh;   /* besser für iPhone */
-    padding: 72px 14px 28px; /* Platz für Back-Button oben */
+    display: block;            /* statt grid */
+    padding: 72px 14px 28px;   /* Platz für Back-Button */
   }
 
   .menu-title {
     text-align: left;
     margin-top: 10px;
+    font-size: 42px;
+    margin-bottom: 20px;
   }
-
 
   .menu-levels {
     width: 100%;
@@ -129,13 +198,8 @@ body.menu {
     gap: 10px;
   }
 
-  .menu-card h2 {
-    font-size: 20px;
-  }
-
-  .menu-card p {
-    font-size: 14px;
-  }
+  .menu-card h2 { font-size: 20px; }
+  .menu-card p { font-size: 14px; }
 
   .menu-icon {
     justify-self: end;
@@ -155,16 +219,18 @@ body.menu {
     font-size: 16px;
   }
 
+  /* Levels */
   .level-page {
-    padding-top: 72px; /* Platz für Back-Button */
-    width: 100%;
-    box-sizing: border-box;
+    padding: 72px 14px 24px;
   }
 
-  .card {
+  .level-card {
     width: 100%;
-    border-radius: 20px;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .level-header {
+    text-align: left;
   }
 }
-
-

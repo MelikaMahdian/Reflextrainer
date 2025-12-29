@@ -1,14 +1,15 @@
 window.renderWarmup = function renderWarmup(opts = {}) {
   const { onBack = () => {}, onComplete = () => {} } = opts;
 
-  document.body.className = "warmup";
+  document.body.className = "level";
   const app = document.getElementById("app");
 
   app.innerHTML = `
     <button class="back-btn" id="backBtn" type="button">← Zurück</button>
 
-    <main class="wu-page">
-      <section class="wu-card">
+    <main class="level-page">
+      <section class="level-card wu-card">
+
         <div class="wu-head">
           <div>
             <h2 class="wu-title">Warm-up</h2>
@@ -93,7 +94,7 @@ window.renderWarmup = function renderWarmup(opts = {}) {
 
   function placeTargetRandom() {
     const rect = arena.getBoundingClientRect();
-    const size = 140;
+    const size = Math.min(140, Math.floor(rect.width * 0.28));
     const padding = 24;
 
     const maxX = Math.max(padding, rect.width - size - padding);

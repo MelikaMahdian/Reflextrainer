@@ -1,9 +1,7 @@
 body.warmup {
 /*background: linear-gradient(180deg, #5ae37c, #2fa84e);
   min-height: 100svh;*/
-   background: radial-gradient(circle at top, #1e293b, #020617);
-  min-height: 100svh;
-  color: #111;
+ 
 }
 
 .wu-page {
