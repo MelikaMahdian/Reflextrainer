@@ -58,3 +58,17 @@ body.catch {
 .catch-feedback { text-align: center; margin-top: 14px; font-weight: 900; min-height: 26px; }
 .catch-feedback.ok { color: #16a34a; }
 .catch-feedback.bad { color: #dc2626; }
+@media (max-width: 768px) {
+  .catch-arena {
+    height: 360px;
+  }
+
+  .catch-hud {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .hud-item {
+    min-width: 90px;
+  }
+}

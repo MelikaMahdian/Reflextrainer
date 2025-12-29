@@ -52,9 +52,9 @@ function renderMenu() {
           ${LEVELS.map((lvl, i) => {
             const title = ({
               warmup: "Warm-up",
-              colors: "Farben",
-              numbers: "Nummer Suchen",
-              catch: "Fang den Ball"
+              colors: "Colors",
+              numbers: "Numbers",
+              catch: "Ball"
             })[lvl];
 
             const sub = ({

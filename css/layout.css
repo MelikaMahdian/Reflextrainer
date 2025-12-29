@@ -101,3 +101,53 @@ body.menu {
   font-size: 18px;
   cursor: pointer;
 }
+/* ---------- Responsive Layout (Menu & global) ---------- */
+@media (max-width: 768px) {
+
+  .menu-page {
+    padding: 24px 14px;
+  }
+
+  .menu-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  .menu-levels {
+    width: 100%;
+    gap: 14px;
+  }
+
+  .menu-card {
+    padding: 16px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .menu-card h2 {
+    font-size: 20px;
+  }
+
+  .menu-card p {
+    font-size: 14px;
+  }
+
+  .menu-icon {
+    justify-self: end;
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .menu-hint {
+    font-size: 14px;
+    margin-top: 18px;
+  }
+
+  .back-btn {
+    top: 14px;
+    left: 14px;
+    font-size: 16px;
+  }
+}
+

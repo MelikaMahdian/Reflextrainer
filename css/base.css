@@ -5,4 +5,22 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
-button { font: inherit; }
+button { 
+  font: inherit; 
+  touch-action: manipulation;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- Mobile Fix (global) ---------- */
+@media (max-width: 768px) {
+  .menu-levels,
+  .wu-card,
+  .colors-card,
+  .num-card,
+  .catch-card {
+    width: 100%;
+    padding: 20px;
+  }
+}

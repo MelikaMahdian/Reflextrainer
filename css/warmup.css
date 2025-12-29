@@ -95,3 +95,17 @@ body.warmup {
   opacity: 0;
   transition: opacity .12s ease;
 }
+@media (max-width: 768px) {
+  .wu-sub {
+    font-size: 20px;
+  }
+
+  .wu-target {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  .wu-arena {
+    height: 360px;
+  }
+}

@@ -94,3 +94,19 @@ body.numbers {
 }
 .num-feedback.ok { color: #16a34a; }
 .num-feedback.bad { color: #dc2626; }
+@media (max-width: 768px) {
+  .num-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .num-btn {
+    width: 100%;
+    height: 80px;
+    font-size: 28px;
+  }
+
+  .num-word {
+    font-size: 40px;
+  }
+}
+

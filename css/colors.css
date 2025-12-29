@@ -71,3 +71,20 @@ body.colors {
 }
 .colors-feedback.ok { color: #16a34a; }
 .colors-feedback.bad { color: #dc2626; }
+@media (max-width: 768px) {
+  .colors-display {
+    height: 160px;
+  }
+
+  .colors-word {
+    font-size: 36px;
+  }
+
+  .colors-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
