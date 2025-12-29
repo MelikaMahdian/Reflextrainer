@@ -1,6 +1,6 @@
 body.catch {
   background: linear-gradient(180deg, #f59e0b, #ea580c);
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .catch-wrap {

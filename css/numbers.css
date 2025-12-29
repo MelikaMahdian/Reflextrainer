@@ -1,6 +1,6 @@
 body.numbers {
   background: linear-gradient(180deg, #b88bff, #8b5cf6);
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .num-wrap {
