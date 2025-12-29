@@ -61,14 +61,17 @@ body.catch {
 @media (max-width: 768px) {
   .catch-arena {
     height: 360px;
+    max-height: 55vh;
   }
 
   .catch-hud {
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
+    row-gap: 12px;
   }
 
   .hud-item {
-    min-width: 90px;
+    flex: 1 1 30%;
+    text-align: center;
   }
 }

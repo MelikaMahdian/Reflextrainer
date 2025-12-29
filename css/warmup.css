@@ -101,11 +101,19 @@ body.warmup {
   }
 
   .wu-target {
-    width: 90px !important;
-    height: 90px !important;
+    width: 80px !important;
+    height: 80px !important;
   }
 
   .wu-arena {
     height: 360px;
+    max-height: 60vh;
+  }
+   
+  .wu-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 }
+
