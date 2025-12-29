@@ -1,8 +1,6 @@
 body.warmup {
   /*background: linear-gradient(180deg, #5ae37c, #2fa84e);*/
-  background:
-    
-    linear-gradient(180deg, #0b1220, #0a0f1a);
+  background: linear-gradient(180deg, #0b1220, #0a0f1a);
 
   min-height: 100vh;
 }
