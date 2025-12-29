@@ -1,0 +1,97 @@
+body.warmup {
+  background: linear-gradient(180deg, #5ae37c, #2fa84e);
+  min-height: 100vh;
+}
+
+.wu-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 26px;
+}
+
+.wu-card {
+  width: min(1260px, 96vw);
+  background: #fff;
+  border-radius: 22px;
+  padding: 44px 54px 42px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+}
+
+.wu-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 16px;
+}
+
+.wu-title {
+  margin: 0 0 10px;
+  font-size: 30px;
+  color: #2ea84b;
+}
+
+.wu-sub {
+  margin: 0;
+  font-size: 26px;
+  color: #314155;
+}
+
+.wu-score {
+  text-align: center;
+  margin-top: 14px;
+  min-width: 220px;
+}
+
+.wu-score__label {
+  font-size: 26px;
+  color: #2ea84b;
+  font-weight: 700;
+}
+
+.wu-score__value {
+  margin-top: 6px;
+  font-size: 28px;
+  color: #2ea84b;
+  font-weight: 800;
+}
+
+.wu-center {
+  display: flex;
+  justify-content: center;
+  margin: 46px 0 18px;
+}
+
+.wu-start {
+  border: none;
+  background: #45c15a;
+  color: white;
+  font-size: 24px;
+  padding: 18px 44px;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+}
+
+.wu-start:disabled { opacity: .85; cursor: not-allowed; }
+
+.wu-arenaWrap { margin-top: 22px; }
+
+.wu-arena {
+  position: relative;
+  height: 520px;
+  background: #f3f6fb;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.wu-target {
+  position: absolute;
+  border: none;
+  background: #45c15a;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 18px 28px rgba(0,0,0,0.18);
+  opacity: 0;
+  transition: opacity .12s ease;
+}
