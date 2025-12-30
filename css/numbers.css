@@ -96,31 +96,27 @@ body.level.numbers {
 
 /* Grid: responsive */
 .num-grid {
-  margin-top: 18px;
+  margin-top: 20px;
 
   display: grid;
-  grid-template-columns: repeat(3, var(--tile));
-  gap: var(--gap);
+  grid-template-columns: repeat(3, 120px); /* <<< KLEINE Buttons */
+  gap: 18px;
 
-  justify-content: center;   /* wichtig: zentrieren statt strecken */
-  align-content: start;
-
-  /* Größen-Variablen */
-  --tile: 150px;             /* <-- das ist die echte Kachelgröße */
-  --gap: 18px;
+  justify-content: center; /* zentriert das Grid */
 }
+
 
 
 /* Buttons: quadratisch + responsive */
 .num-btn {
-  width: var(--tile);
-  height: var(--tile);
+  width: 120px;
+  height: 120px;
   border: none;
-  border-radius: 18px;
+  border-radius: 16px;
   background: #8b5cf6;
   color: #fff;
 
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 900;
 
   cursor: pointer;
@@ -131,7 +127,6 @@ body.level.numbers {
 .num-btn:hover { filter: brightness(1.05); }
 .num-btn:active { transform: translateY(1px); }
 
-.num-btn:disabled { opacity: .65; cursor: not-allowed; }
 
 /* Feedback */
 .num-feedback {
@@ -177,5 +172,17 @@ body.level.numbers {
   .num-grid {
     --tile: 96px;
     --gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .num-grid {
+    grid-template-columns: repeat(3, 96px);
+    gap: 12px;
+  }
+
+  .num-btn {
+    width: 96px;
+    height: 96px;
+    font-size: 20px;
   }
 }
