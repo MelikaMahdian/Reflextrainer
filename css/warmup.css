@@ -5,19 +5,24 @@ body.warmup {
 }
 
 .wu-page {
-  min-height: 100vh;
+  min-height: 100svh;
   display: grid;
   place-items: center;
   padding: 26px;
 }
 
 .wu-card {
-  width: min(1260px, 96vw);
+  width: min(1100px, 94vw);
   background: #fff;
-  border-radius: 22px;
-  padding: 44px 54px 42px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.35);
+
+  /* 👉 DAS IST DER WICHTIGE TEIL */
+  max-height: 82vh;
+  overflow: hidden;
 }
+
 
 .wu-head {
   display: grid;
