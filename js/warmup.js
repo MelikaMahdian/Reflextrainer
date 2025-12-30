@@ -94,7 +94,7 @@ window.renderWarmup = function renderWarmup(opts = {}) {
 
   function placeTargetRandom() {
     const rect = arena.getBoundingClientRect();
-    const size = Math.min(140, Math.floor(rect.width * 0.22));
+    const size = Math.min(90, Math.floor(rect.width * 0.18));
     const padding = 16;
 // ✅ nutzbarer Bereich (Arena Innenfläche)
    const usableW = Math.max(0, rect.width - padding * 2 - size);
