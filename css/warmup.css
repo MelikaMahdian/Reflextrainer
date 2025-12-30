@@ -83,12 +83,19 @@ body.warmup {
 
 .wu-arenaWrap { margin-top: 22px; }
 
-.wu-arena {
+/*.wu-arena {
   position: relative;
   height: 520px;
   background: #f3f6fb;
   border-radius: 18px;
   overflow: hidden;
+}*/
+.wu-arena {
+  position: relative;
+  width: 100%;
+  height: min(420px, 45vh); /* 🔥 HIER */
+  background: #f4f7fb;
+  border-radius: 20px;
 }
 
 .wu-target {
@@ -102,6 +109,10 @@ body.warmup {
   transition: opacity .12s ease;
 }
 @media (max-width: 768px) {
+  .wu-card {
+    padding: 20px;
+    max-height: none;
+  }
   .wu-sub {
     font-size: 20px;
   }
@@ -112,8 +123,7 @@ body.warmup {
   }
 
   .wu-arena {
-    height: 360px;
-    max-height: 60vh;
+    height: 320px;
   }
    
   .wu-header {
