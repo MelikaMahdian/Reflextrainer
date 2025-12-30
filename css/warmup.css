@@ -96,6 +96,7 @@ body.warmup {
   height: min(420px, 45vh); /* 🔥 HIER */
   background: #f4f7fb;
   border-radius: 20px;
+  overflow: hidden; /* ✅ verhindert, dass was rausragt */
 }
 
 .wu-target {

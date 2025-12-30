@@ -94,10 +94,20 @@ window.renderWarmup = function renderWarmup(opts = {}) {
 
   function placeTargetRandom() {
     const rect = arena.getBoundingClientRect();
-    const size = Math.min(140, Math.floor(rect.width * 0.28));
-    const padding = 24;
+    const size = Math.min(140, Math.floor(rect.width * 0.22));
+    const padding = 16;
+// ✅ nutzbarer Bereich (Arena Innenfläche)
+   const usableW = Math.max(0, rect.width - padding * 2 - size);
+   const usableH = Math.max(0, rect.height - padding * 2 - size);
 
-    const maxX = Math.max(padding, rect.width - size - padding);
+   const x = padding + Math.random() * usableW;
+   const y = padding + Math.random() * usableH;
+
+  target.style.width = `${size}px`;
+  target.style.height = `${size}px`;
+  target.style.left = `${x}px`;
+  target.style.top = `${y}px`;
+   /* const maxX = Math.max(padding, rect.width - size - padding);
     const maxY = Math.max(padding, rect.height - size - padding);
 
     const x = padding + Math.random() * (maxX - padding);
@@ -106,6 +116,6 @@ window.renderWarmup = function renderWarmup(opts = {}) {
     target.style.left = `${x}px`;
     target.style.top = `${y}px`;
     target.style.width = `${size}px`;
-    target.style.height = `${size}px`;
+    target.style.height = `${size}px`;*/
   }
 };
