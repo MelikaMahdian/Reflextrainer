@@ -12,7 +12,7 @@
 }
 
 /* Page Wrapper */
-/*.num-wrap {
+.num-wrap {
   min-height: 100svh;
   display: grid;
   place-items: center;
@@ -20,14 +20,14 @@
 }
 
 /* White card (wie Colors) */
-/*
+
 .num-card {
   width: min(1100px, 94vw);
   background: #fff;
   border-radius: 24px;
   padding: clamp(18px, 2.6vw, 30px);
   box-shadow: 0 30px 80px rgba(0,0,0,.35);
-}*/
+}
 
 /* Header */
 .num-header {
