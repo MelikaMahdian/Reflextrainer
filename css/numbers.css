@@ -100,7 +100,7 @@ body.level.numbers {
 
   display: grid;
   grid-template-columns: repeat(3, 100px); /* <<< KLEINE Buttons */
-  gap: 16px;
+  gap: 18px;
 
   justify-content: center; /* zentriert das Grid */
 }
