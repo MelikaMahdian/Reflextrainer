@@ -90,25 +90,13 @@
   user-select: none;
 }
 
-/* Grid responsive (keine festen 160px mehr) 
+/* Grid responsive (keine festen 160px mehr) */
 .num-grid {
   margin-top: 18px;
   display: grid;
   grid-template-columns: repeat(3, minmax(76px, 1fr));
   gap: clamp(10px, 1.6vw, 16px);
-}*/
-.num-grid{
-  margin-top: 16px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-
-  /* das begrenzt die Gesamtbreite, damit Buttons nicht zu groß werden */
-  max-width: 520px;
-  width: 100%;
-  margin-inline: auto;
 }
-
 
 /* Buttons: quadratisch + responsiv */
 .num-btn {
@@ -147,8 +135,4 @@
     justify-content: flex-start;
     gap: 14px;
   }
-  .num-grid{ max-width: 100%; gap: 10px; }
-  .num-btn{ border-radius: 16px; }
-
-
 }
