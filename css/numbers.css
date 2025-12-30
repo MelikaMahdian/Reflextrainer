@@ -22,7 +22,7 @@ body.level.numbers {
   width: min(860px, 92vw);
   background: #fff;
   border-radius: 24px;
-  padding: clamp(16px, 2vw, 22px);
+  padding: 22px;
   box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
   color: #111;
 }
@@ -97,21 +97,32 @@ body.level.numbers {
 /* Grid: responsive */
 .num-grid {
   margin-top: 18px;
+
   display: grid;
-  grid-template-columns: repeat(3, minmax(70px, 1fr));
-  gap: clamp(10px, 1.2vw, 14px);
+  grid-template-columns: repeat(3, var(--tile));
+  gap: var(--gap);
+
+  justify-content: center;   /* wichtig: zentrieren statt strecken */
+  align-content: start;
+
+  /* Größen-Variablen */
+  --tile: 150px;             /* <-- das ist die echte Kachelgröße */
+  --gap: 18px;
 }
+
 
 /* Buttons: quadratisch + responsive */
 .num-btn {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: var(--tile);
+  height: var(--tile);
   border: none;
-  border-radius: 16px;
+  border-radius: 18px;
   background: #8b5cf6;
   color: #fff;
-  font-size: clamp(16px, 3vw, 26px);
+
+  font-size: 28px;
   font-weight: 900;
+
   cursor: pointer;
   box-shadow: 0 14px 24px rgba(0,0,0,.18);
   transition: transform .08s ease, filter .12s ease;
@@ -119,6 +130,7 @@ body.level.numbers {
 
 .num-btn:hover { filter: brightness(1.05); }
 .num-btn:active { transform: translateY(1px); }
+
 .num-btn:disabled { opacity: .65; cursor: not-allowed; }
 
 /* Feedback */
@@ -147,8 +159,23 @@ body.level.numbers {
 
   .stat { min-width: auto; }
 
-  /* Grid enger auf Mobile */
+
+}
+@media (max-width: 768px) {
   .num-grid {
-    grid-template-columns: repeat(3, minmax(72px, 1fr));
+    --tile: 108px;
+    --gap: 12px;
+  }
+
+  .num-btn {
+    font-size: 22px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .num-grid {
+    --tile: 96px;
+    --gap: 10px;
   }
 }
