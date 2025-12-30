@@ -1,7 +1,7 @@
 window.renderNumbers = function renderNumbers(opts = {}) {
   const { onBack = () => {}, onComplete = () => {} } = opts;
 
-  document.body.className = "level";
+  document.body.className = "numbers";
   const app = document.getElementById("app");
 
  app.innerHTML = `
