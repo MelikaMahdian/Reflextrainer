@@ -1,41 +1,43 @@
 window.renderNumbers = function renderNumbers(opts = {}) {
   const { onBack = () => {}, onComplete = () => {} } = opts;
 
-  document.body.className = "numbers";
+  document.body.className = "level";
   const app = document.getElementById("app");
 
-  app.innerHTML = `
-    <button class="back-btn" id="backBtn" type="button">← Zurück</button>
+ app.innerHTML = `
+  <button class="back-btn" id="backBtn" type="button">← Zurück</button>
 
-    <div class="num-wrap">
-      <div class="num-card">
-        <div class="num-header">
-          <div>
-            <h2 class="num-title">Zahlen</h2>
-            <p class="num-sub">Klicke auf die Zahl, die dem angezeigten Wort entspricht!</p>
-          </div>
+  <main class="level-page">
+    <section class="level-card num-card">
 
-          <div class="num-stats">
-            <div class="stat">
-              <div class="label">Punkte</div>
-              <div class="value"><span id="points">0</span> / <span id="goalPoints">5</span></div>
-            </div>
-            <div class="stat">
-              <div class="label">Runde</div>
-              <div class="value"><span id="round">0</span> / <span id="goalRounds">5</span></div>
-            </div>
-          </div>
+      <div class="num-header">
+        <div>
+          <h2 class="num-title">Zahlen</h2>
+          <p class="num-sub">Klicke auf die Zahl, die dem angezeigten Wort entspricht!</p>
         </div>
 
-        <div class="num-display">
-          <div class="num-word" id="word">SIEBEN</div>
+        <div class="num-stats">
+          <div class="stat">
+            <div class="label">Punkte</div>
+            <div class="value"><span id="points">0</span> / <span id="goalPoints">5</span></div>
+          </div>
+          <div class="stat">
+            <div class="label">Runde</div>
+            <div class="value"><span id="round">0</span> / <span id="goalRounds">5</span></div>
+          </div>
         </div>
-
-        <div class="num-grid" id="grid"></div>
-        <div class="num-feedback" id="feedback"></div>
       </div>
-    </div>
-  `;
+
+      <div class="num-display">
+        <div class="num-word" id="word">SIEBEN</div>
+      </div>
+
+      <div class="num-grid" id="grid"></div>
+      <div class="num-feedback" id="feedback"></div>
+
+    </section>
+  </main>
+`;
 
   document.getElementById("backBtn").addEventListener("click", onBack);
 
