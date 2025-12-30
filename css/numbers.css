@@ -99,8 +99,8 @@ body.level.numbers {
   margin-top: 20px;
 
   display: grid;
-  grid-template-columns: repeat(3, 120px); /* <<< KLEINE Buttons */
-  gap: 18px;
+  grid-template-columns: repeat(3, 100px); /* <<< KLEINE Buttons */
+  gap: 16px;
 
   justify-content: center; /* zentriert das Grid */
 }
