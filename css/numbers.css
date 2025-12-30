@@ -100,7 +100,7 @@ body.level.numbers {
 
   display: grid;
   grid-template-columns: repeat(3, 100px); /* <<< KLEINE Buttons */
-  gap: 19px;
+  gap: 28px;
 
   justify-content: center; /* zentriert das Grid */
 }
@@ -109,18 +109,18 @@ body.level.numbers {
 
 /* Buttons: quadratisch + responsive */
 .num-btn {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border: none;
   border-radius: 16px;
   background: #8b5cf6;
   color: #fff;
 
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 900;
 
   cursor: pointer;
-  box-shadow: 0 14px 24px rgba(0,0,0,.18);
+  box-shadow: 0 12px 22px rgba(0,0,0,.18);
   transition: transform .08s ease, filter .12s ease;
 }
 
@@ -156,33 +156,17 @@ body.level.numbers {
 
 
 }
+
+
 @media (max-width: 768px) {
   .num-grid {
-    --tile: 108px;
-    --gap: 12px;
-  }
-
-  .num-btn {
-    font-size: 22px;
-    border-radius: 16px;
-  }
-}
-
-@media (max-width: 380px) {
-  .num-grid {
-    --tile: 96px;
-    --gap: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .num-grid {
-    grid-template-columns: repeat(3, 96px);
+    grid-template-columns: repeat(3, 90px);
     gap: 12px;
   }
 
   .num-btn {
-    width: 96px;
-    height: 96px;
+    width: 90px;
+    height: 90px;
     font-size: 20px;
   }
 }
